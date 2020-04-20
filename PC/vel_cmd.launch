@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+        <!-- For Left Wheel -->
+        <node pkg="motor_drive" name="pwm_left" type="pwm.py" output="screen">
+            <remap from='/PWM' to='/PWM_left'/>
+        </node>
+
+        <node pkg="motor_drive" name="encoder_left" type="encoder_polyfit.py" output="screen">
+            <remap from='/Encoder' to='/Encoder_left'/>
+        </node>
+
+        <!-- For Right Wheel -->
+        <node pkg="motor_drive" name="pwm_right" type="pwm.py" output="screen">
+            <remap from='/PWM' to='/PWM_right'/>
+        </node>
+
+        <node pkg="motor_drive" name="encoder_right" type="encoder_polyfit.py" output="screen">
+            <remap from='/Encoder' to='/Encoder_right'/>
+        </node>
+        
+
+</launch>

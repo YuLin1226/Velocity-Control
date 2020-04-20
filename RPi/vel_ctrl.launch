@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+        <!-- For Left Wheel -->
+        <node pkg="motor_drive" name="use_encoder_left" type="read_encoder.py" output="screen">
+                <remap from='/Encoder' to='/Encoder_left'/>
+        </node>
+
+        <node pkg="motor_drive" name="use_motor_left" type="input.py" output="screen">
+        </node>
+
+        <!-- For Right Wheel -->
+        <node pkg="motor_drive" name="use_encoder_right" type="read_encoder.py" output="screen">
+                <remap from='/Encoder' to='/Encoder_left'/>
+        </node>
+
+        <node pkg="motor_drive" name="use_motor_right" type="input.py" output="screen">
+        </node>
+
+</launch>
